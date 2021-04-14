@@ -1,0 +1,40 @@
+{
+  "name": "discord-bot-template",
+  "version": "1.0.0",
+  "description": "Discord Bot Template",
+  "main": "src/index.js",
+  "scripts": {
+    "clean": "rimraf build/",
+    "prebuild": "npm run clean",
+    "build": "babel src -d build",
+    "prestart": "npm run build",
+    "start": "node ./build/index.js",
+    "predev": "npm run build",
+    "dev": "node -r dotenv/config ./build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brian-nunez/discord-bot-template.git"
+  },
+  "author": "Brian Nunez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brian-nunez/discord-bot-template/issues"
+  },
+  "homepage": "https://github.com/brian-nunez/discord-bot-template#readme",
+  "dependencies": {
+    "debug": "^4.3.1",
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "^0.12.3",
+    "dotenv": "^8.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/polyfill": "^7.12.1",
+    "babel-preset-nunez": "^1.0.0",
+    "eslint": "^7.24.0",
+    "eslint-config-amex": "^14.1.0"
+  }
+}
